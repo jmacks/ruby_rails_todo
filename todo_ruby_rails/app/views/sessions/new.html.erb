@@ -1,0 +1,13 @@
+<div class="login-form">
+
+  <h1>LOGIN</h1>
+  <%= form_tag sessions_path, method: :post do %>
+  USERNAME: <%= text_field_tag :username %>
+  PASSWORD: <%= password_field_tag :password %>
+  <%= submit_tag "LOGIN" %>
+  <% end %>
+
+  <%= link_to "HOME", root_path %>
+
+
+</div>
