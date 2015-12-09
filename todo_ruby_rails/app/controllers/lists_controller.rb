@@ -11,6 +11,7 @@ class ListsController < ApplicationController
   end
 
   def create
+    @user = User.find(params[:user_id])
     @list = List.new(list_params)
     @list.user_id = params[:user_id]
     @list.save

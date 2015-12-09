@@ -1,0 +1,15 @@
+<div class="list-index">
+  <h1> todo lists</h1>
+  <ul>
+    <% @user.lists.each do |list| %>
+    <li>
+      <h3><%= link_to list.title, user_lists_path(@user.id, list) %></h3>
+    </li>
+    <% end %>
+  </ul>
+
+  <h4><%= link_to 'Add a List', new_user_list_path %></h4>
+
+  <%= link_to 'HOME', root_path %>
+
+</div>

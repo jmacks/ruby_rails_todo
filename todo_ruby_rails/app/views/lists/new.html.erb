@@ -1,0 +1,18 @@
+<div class="new-list">
+  <h1>Create a new todo list</h1>
+  <%= form_for(@list, url: user_lists_path(@user.id)) do |f| %>
+    <ul>
+      <% @image.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    </ul>
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.submit 'Submit' %>
+    </p>
+
+  <% end %>
+</div>
+<%= link_to 'HOME', root_path %>
