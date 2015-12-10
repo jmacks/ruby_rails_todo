@@ -9,7 +9,7 @@
     <% end %>
   </ul>
 
-<h3>Add a ToDo</h3>
+<h6>Add a ToDo</h6>
 
 <%= form_for @todo, url: user_list_todos_path(@user.id, @list) do |f| %>
 <%= f.text_field :content %>
