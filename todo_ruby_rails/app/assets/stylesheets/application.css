@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+ /*
+  *= require material_design_rails
+  */
+body {
+  text-align: center;
+}
+
+#welcome {
+  list-style: none;
+}
+
+.page {
+  text-align: center;
+}
