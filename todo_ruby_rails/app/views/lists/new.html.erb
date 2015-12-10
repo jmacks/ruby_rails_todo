@@ -2,8 +2,9 @@
   <h1>Create a new todo list</h1>
   <%= form_for(@list, url: user_lists_path(@user.id)) do |f| %>
     <ul>
-      <% @image.errors.full_messages.each do |error| %>
+      <% @list.errors.full_messages.each do |error| %>
       <li><%= error %></li>
+      <% end %>
     </ul>
     <p>
       <%= f.label :title %><br>

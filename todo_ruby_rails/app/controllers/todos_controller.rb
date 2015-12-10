@@ -8,6 +8,7 @@ class TodosController < ApplicationController
       @todo.user_id = params[:user_id]
       @todo.list_id = params[:list_id]
       @todo.save
+      redirect_to user_list_path(params[:user_id], params[:list_id])
     end
 
     def todo_params

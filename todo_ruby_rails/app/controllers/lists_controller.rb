@@ -15,11 +15,11 @@ class ListsController < ApplicationController
     @list = List.new(list_params)
     @list.user_id = params[:user_id]
     @list.save
-
-
+    redirect_to user_lists_path
   end
 
   def show
+    @user = User.find(params[:user_id])
     @list = List.find(params[:id])
     @todo = Todo.new
     @todo.list_id = @todo.id

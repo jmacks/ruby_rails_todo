@@ -19,11 +19,15 @@ class UsersController < ApplicationController
   end
 
   def create
+    puts "I am creating a user"
+    puts user_params
     user = User.new(user_params)
-    if user.save
+    if user.save!
+      puts "saved"
       session[:user_id] = user.id
       redirect_to user_path(user)
     else
+      puts "failure"
       redirect_to root_path
     end
   end

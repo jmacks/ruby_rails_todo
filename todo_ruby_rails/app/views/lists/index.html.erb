@@ -3,7 +3,7 @@
   <ul>
     <% @user.lists.each do |list| %>
     <li>
-      <h3><%= link_to list.title, user_lists_path(@user.id, list) %></h3>
+      <h3><%= link_to list.title, user_list_path(@user.id, list) %></h3>
     </li>
     <% end %>
   </ul>
