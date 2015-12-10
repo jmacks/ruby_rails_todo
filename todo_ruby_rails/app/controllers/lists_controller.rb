@@ -25,6 +25,12 @@ class ListsController < ApplicationController
     @todo.list_id = @todo.id
   end
 
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+    redirect_to user_lists_path(params[:user_id])
+  end
+
   def list_params
     params.require(:list).permit(:title)
   end

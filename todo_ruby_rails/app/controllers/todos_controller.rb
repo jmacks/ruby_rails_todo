@@ -11,6 +11,12 @@ class TodosController < ApplicationController
       redirect_to user_list_path(params[:user_id], params[:list_id])
     end
 
+    def destroy
+      @todo = Todo.find(params[:id])
+      @todo.destroy
+      redirect_to user_list_path(params[:user_id], params[:list_id])
+    end
+
     def todo_params
       params.require(:todo).permit(:content)
     end

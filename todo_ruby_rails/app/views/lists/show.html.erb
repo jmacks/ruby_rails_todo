@@ -4,7 +4,7 @@
   <ul>
     <% @list.todos.each do |todo| %>
     <li>
-      <%= todo.content %>
+      <%= todo.content %><%= link_to 'delete', user_list_todo_path(@user.id, @list.id, todo.id), method: :delete %>
     </li>
     <% end %>
   </ul>
