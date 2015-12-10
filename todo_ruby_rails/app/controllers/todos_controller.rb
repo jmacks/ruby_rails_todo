@@ -12,7 +12,7 @@ class TodosController < ApplicationController
     end
 
     def todo_params
-      params.require(:todo).permit(:text)
+      params.require(:todo).permit(:content)
     end
 
 
