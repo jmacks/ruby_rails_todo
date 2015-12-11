@@ -4,14 +4,15 @@
     <% @user.lists.each do |list| %>
 
     <li>
-      <h3><%= link_to list.title, user_list_path(@user.id, list) %></h3>
-      <%= link_to 'delete', user_list_path(@user.id, list.id), method: :delete %>
+      <button id="list-link" class="mdl-button"><%= link_to list.title, user_list_path(@user.id, list), {:style=>'text-decoration:none font-size:50px'} %></button>
+
+      <%= link_to 'X', user_list_path(@user.id, list.id), method: :delete %>
     </li>
 
     <% end %>
   </ul>
 
-  <h4><%= link_to 'Add a List', new_user_list_path %></h4>
+  <h4><%= link_to 'Add a List', new_user_list_path, {:style=>'text-decoration:none'} %></h4>
 
 
 </div>

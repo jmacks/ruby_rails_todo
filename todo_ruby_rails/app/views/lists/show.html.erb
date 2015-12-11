@@ -1,11 +1,15 @@
-<div class="page">
+<div>
 <p><%= @user.username %></p>
   <h1><%= @list.title %></h1>
-  <ul>
+  <ul class="todos">
     <% @list.todos.each do |todo| %>
-    <li>
-      <%= todo.content %><%= link_to 'delete', user_list_todo_path(@user.id, @list.id, todo.id), method: :delete %>
-    </li>
+
+      <input type="checkbox">
+
+      <%= todo.content %>
+
+      <%= link_to 'X', user_list_todo_path(@user.id, @list.id, todo.id), method: :delete %>
+
     <% end %>
   </ul>
 

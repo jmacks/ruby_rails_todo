@@ -10,10 +10,10 @@
 </head>
 <body>
   <div class="nav">
-    <button id="home-btn" class="mdl-button"><%= link_to "HOME", root_path %></button>
+    <button id="home-btn" class="mdl-button"><%= link_to "HOME", root_path, {:style=>'text-decoration:none'} %></button>
     <button id="back-btn" class="mdl-button"><a href="javascript:history.back()">Back</a></button>
   </div>
-  
+
 <%= yield %>
 
 </body>
