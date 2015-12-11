@@ -16,13 +16,17 @@
  /*
   *= require material_design_rails
   */
+
 body {
   text-align: center;
+  background-image: url('http://orig03.deviantart.net/6a36/f/2012/072/c/0/light_blue_metal_by_rubberd91-d4sodfs.jpg');
 }
 
 #welcome {
   list-style: none;
 }
+
+
 
 .page {
   text-align: center;
@@ -31,3 +35,12 @@ body {
 .list-list {
   list-style: none;
 }
+
+.nav {
+  position: fixed;
+  margin-top: -25px;
+}
+
+
+*= require formtastic
+*= require my_formtastic_changes

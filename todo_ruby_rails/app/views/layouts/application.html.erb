@@ -2,13 +2,18 @@
 <html>
 <head>
   <title>TodoRubyRails</title>
+  <%= stylesheet_link_tag 'application' %>
   <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div class="nav">
+    <button id="home-btn" class="mdl-button"><%= link_to "HOME", root_path %></button>
+    <button id="back-btn" class="mdl-button"><a href="javascript:history.back()">Back</a></button>
+  </div>
+  
 <%= yield %>
 
 </body>
