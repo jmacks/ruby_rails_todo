@@ -27,3 +27,7 @@ body {
 .page {
   text-align: center;
 }
+
+.list-list {
+  list-style: none;
+}
