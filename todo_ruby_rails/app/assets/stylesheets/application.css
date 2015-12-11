@@ -45,8 +45,9 @@ a:hover {
 }
 
 .nav {
-  position: fixed;
-  margin-top: -25px;
+  position: absolute;
+  top: 0;
+  /*margin-top: -25px;*/
 }
 
 .todos {

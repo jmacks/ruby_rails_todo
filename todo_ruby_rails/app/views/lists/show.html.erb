@@ -3,13 +3,13 @@
   <h1><%= @list.title %></h1>
   <ul class="todos">
     <% @list.todos.each do |todo| %>
+      <li>
+        <input type="checkbox">
 
-      <input type="checkbox">
+        <%= todo.content %>
 
-      <%= todo.content %>
-
-      <%= link_to 'X', user_list_todo_path(@user.id, @list.id, todo.id), method: :delete %>
-
+        <%= link_to 'X', user_list_todo_path(@user.id, @list.id, todo.id), method: :delete %>
+      </li>
     <% end %>
   </ul>
 
